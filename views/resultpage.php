@@ -4,7 +4,7 @@ check_login();
 include('../views/header.php');
 ?>
 		<div class="col-md-12">
-			<h1>JSON writer with captcha login</h1>
+			<h1>JSON writer with captcha login </h1>
 			<div class="col-md-6">
 				<h3>Save database as JSON</h3>
 					<button onclick="open_script()">Save JSON</button>

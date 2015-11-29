@@ -66,24 +66,24 @@ function login()
 
   if(empty($username) AND empty($password))
   {
-    $error = 'Du udfyldte ikke felterne. Gør det venligst.';
+    $error = 'You did not fill out all forms. Do so please.';
     return false;
   }
 
   if(!filter_var($username, FILTER_VALIDATE_EMAIL))
   {
-    $error = 'Dette er ikke en email, angiv venligst en email.';
+    $error = 'This is not an email, please fill in an email-address.';
     return false;
   }
 
   $user = query('SELECT id FROM users WHERE email = "'.$username.'" AND password = "'.$password.'" ');
   
   if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  { 
-     echo  '<strong>Forkert verfikations kode.</strong>';
+     echo  '<strong>Wrong verification code.</strong>';
 	} else { 
   	if(count($user) < 1)
   	{
-    	$error = 'Forkert email, password eller verifikations kode.';
+    	$error = 'Wrong email, password or verification code.';
 		return false;
   	}
   }
