@@ -9,6 +9,10 @@ include('../views/header.php');
 				<h3>Save database as JSON</h3>
 					<button onclick="open_script()">Save JSON</button>
 				<h3><a href="../models/logout.php">Log ud</a></h3>
+				<h3>Show JSON</h3>
+					<button onclick="open_script2()">Show JSON</button>
+				<h3><a href="../models/logout.php">Log out</a></h3>
+								
     		</div>
 			<div class="col-md-6">
 				<h3>You are logged in as</h3>
